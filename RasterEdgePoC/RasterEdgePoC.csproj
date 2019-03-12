@@ -34,6 +34,42 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="RasterEdge.Imaging.Basic">
+      <HintPath>..\lib\RasterEdge.Imaging.Basic.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.Imaging.Basic.Codec">
+      <HintPath>..\lib\RasterEdge.Imaging.Basic.Codec.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.Imaging.Drawing">
+      <HintPath>..\lib\RasterEdge.Imaging.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.Imaging.Font">
+      <HintPath>..\lib\RasterEdge.Imaging.Font.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.Imaging.Processing">
+      <HintPath>..\lib\RasterEdge.Imaging.Processing.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.XDoc.Excel">
+      <HintPath>..\lib\RasterEdge.XDoc.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.XDoc.Office.Inner.Common">
+      <HintPath>..\lib\RasterEdge.XDoc.Office.Inner.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.XDoc.Office.Inner.Office03">
+      <HintPath>..\lib\RasterEdge.XDoc.Office.Inner.Office03.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.XDoc.PowerPoint">
+      <HintPath>..\lib\RasterEdge.XDoc.PowerPoint.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.XDoc.Word">
+      <HintPath>..\lib\RasterEdge.XDoc.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.XImage.Raster">
+      <HintPath>..\lib\RasterEdge.XImage.Raster.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.XImage.Raster.Core">
+      <HintPath>..\lib\RasterEdge.XImage.Raster.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +83,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppChooser.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="ConverterProvider.cs" />
+    <Compile Include="Converters\ExcelConverter.cs" />
+    <Compile Include="Converters\IConverter.cs" />
+    <Compile Include="Converters\PowerPointConverter.cs" />
+    <Compile Include="Converters\WordConverter.cs" />
+    <Compile Include="Logger\ILogger.cs" />
+    <Compile Include="Logger\Logger.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,6 +100,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SupportedApplications.cs" />
+    <Compile Include="TestRunner.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
